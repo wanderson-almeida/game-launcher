@@ -1,0 +1,25 @@
+{
+  "name": "game-launcher",
+  "version": "1.0.0",
+  "description": "teste",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wanderson-almeida/game-launcher.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wanderson-almeida/game-launcher/issues"
+  },
+  "homepage": "https://github.com/wanderson-almeida/game-launcher#readme",
+  "devDependencies": {
+    "electron": "^40.8.0"
+  }
+}
