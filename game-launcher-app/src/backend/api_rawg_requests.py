@@ -1,4 +1,4 @@
-import httpx, asyncio, json, os
+import aiohttp, asyncio, json, os
 from dotenv import load_dotenv
 
 load_dotenv(verbose=True)
@@ -8,12 +8,12 @@ apiKey = os.getenv("RAWG_API_KEY")
 
 
 async def GetGameDetails(gameName):
-    async with httpx.AsyncClient(base_url=baseGamesUrl) as client:
-        r = await client.get(f"/games/{gameName}?key={apiKey}")
-        data = r.json()
+    async with aiohttp.ClientSession() as session:
+        async with session.get(f"{baseGamesUrl}/games/{gameName}?key={apiKey}") as r:
+            data = await r.json()
 
-        screenshots = await client.get(f"/games/{gameName}/screenshots?key={apiKey}")
-        images = screenshots.json()
+        async with session.get(f"{baseGamesUrl}/games/{gameName}/screenshots?key={apiKey}") as screenshots:
+            images = await screenshots.json()
 
         organized = {
             "id": data["id"],
