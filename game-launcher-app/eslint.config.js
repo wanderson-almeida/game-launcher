@@ -26,4 +26,14 @@ export default defineConfig([
       'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
     },
   },
+  { // especifico pro electron, pq ele usa commonjs
+    files: ['electron/**/*.js'],
+    languageOptions: {
+      ecmaVersion: 2022,
+      globals: globals.node,
+      parserOptions: {
+        sourceType: 'commonjs',
+      },
+    },
+  },
 ])

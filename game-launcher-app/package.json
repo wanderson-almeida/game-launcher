@@ -2,8 +2,7 @@
   "name": "game-launcher-app",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
-  "main": "public/electron.js",
+  "main": "electron/main.js",
   "scripts": {
     "start-all": "concurrently \"npm run dev\" \"npm run start\"",
     "start": "electron .",
@@ -14,6 +13,7 @@
   },
   "dependencies": {
     "dotenv": "^17.3.1",
+    "promises": "^0.2.5",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },

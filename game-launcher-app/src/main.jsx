@@ -1,9 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import App from './pages/App.jsx'
+// import HomePage from './pages/HomePage.jsx';
+import SaveExePath from './test/saveExePath.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <SaveExePath />
   </StrictMode>,
 )
