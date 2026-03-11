@@ -14,12 +14,23 @@
   <body>
     <h2>Pesquisar Jogo</h2>
 
+
     <input type="text" id="pesquisa" placeholder="Digite o nome do jogo">
     <button id="btnPesquisar">Pesquisar</button>
 
     <div id="resultado"></div>
-
+    
     <script src="src/js/pesquisar.js"></script>
+    
+    
+    <button id="btnPesquisarGeral">Pesquisar todos os Jogos</button>
+    
+    <div id="resultadoGeral"></div>
+    
+    <button id="btnAnterior" style="display:none">Anterior</button>
+    <button id="btnProximo" style="display:none">Próximo</button>
+    
+    <script src="src/js/pesquisarGeral.js"></script>
 
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
