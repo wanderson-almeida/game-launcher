@@ -24,3 +24,4 @@ dist-ssr
 *.sw?
 game-launcher-app/.env
 game-launcher-app/src/.env
+.venv
