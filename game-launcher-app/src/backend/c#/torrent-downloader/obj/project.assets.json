@@ -108,114 +108,6 @@
           "build/_._": {}
         }
       }
-    },
-    "net10.0/win-x64": {
-      "Mono.Nat/3.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.1/_._": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.1/Mono.Nat.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "MonoTorrent/3.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Mono.Nat": "3.0.0",
-          "ReusableTasks": "4.0.0"
-        },
-        "compile": {
-          "lib/net6.0/MonoTorrent.BEncoding.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0/MonoTorrent.Client.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0/MonoTorrent.Connections.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0/MonoTorrent.Dht.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0/MonoTorrent.Factories.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0/MonoTorrent.Messages.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0/MonoTorrent.PiecePicking.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0/MonoTorrent.PieceWriter.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0/MonoTorrent.PortForwarding.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0/MonoTorrent.Trackers.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0/MonoTorrent.dll": {
-            "related": ".BEncoding.xml;.Client.xml;.Connections.xml;.Dht.xml;.Factories.xml;.Messages.xml;.PiecePicking.xml;.PieceWriter.xml;.PortForwarding.xml;.Trackers.xml;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/MonoTorrent.BEncoding.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0/MonoTorrent.Client.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0/MonoTorrent.Connections.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0/MonoTorrent.Dht.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0/MonoTorrent.Factories.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0/MonoTorrent.Messages.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0/MonoTorrent.PiecePicking.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0/MonoTorrent.PieceWriter.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0/MonoTorrent.PortForwarding.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0/MonoTorrent.Trackers.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0/MonoTorrent.dll": {
-            "related": ".BEncoding.xml;.Client.xml;.Connections.xml;.Dht.xml;.Factories.xml;.Messages.xml;.PiecePicking.xml;.PieceWriter.xml;.PortForwarding.xml;.Trackers.xml;.xml"
-          }
-        }
-      },
-      "ReusableTasks/4.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net5.0/ReusableTasks.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net5.0/ReusableTasks.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "build/_._": {}
-        }
-      }
     }
   },
   "libraries": {
@@ -754,11 +646,6 @@
           "System.Xml.XPath": "(,4.3.32767]",
           "System.Xml.XPath.XDocument": "(,5.0.32767]"
         }
-      }
-    },
-    "runtimes": {
-      "win-x64": {
-        "#import": []
       }
     }
   }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("torrent-downloader")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6e013a7f18dcbc6138c0057817b09214d947b89c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e2b7ed193d1c36f470b5ded5ac436e25a363dd66")]
 [assembly: System.Reflection.AssemblyProductAttribute("torrent-downloader")]
 [assembly: System.Reflection.AssemblyTitleAttribute("torrent-downloader")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
