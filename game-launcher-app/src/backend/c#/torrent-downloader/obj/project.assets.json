@@ -2,6 +2,126 @@
   "version": 3,
   "targets": {
     "net9.0": {
+      "Microsoft.NET.ILLink.Tasks/9.0.11": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Mono.Nat/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Mono.Nat.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MonoTorrent/3.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Mono.Nat": "3.0.0",
+          "ReusableTasks": "4.0.0"
+        },
+        "compile": {
+          "lib/net6.0/MonoTorrent.BEncoding.dll": {
+            "related": ".xml"
+          },
+          "lib/net6.0/MonoTorrent.Client.dll": {
+            "related": ".xml"
+          },
+          "lib/net6.0/MonoTorrent.Connections.dll": {
+            "related": ".xml"
+          },
+          "lib/net6.0/MonoTorrent.Dht.dll": {
+            "related": ".xml"
+          },
+          "lib/net6.0/MonoTorrent.Factories.dll": {
+            "related": ".xml"
+          },
+          "lib/net6.0/MonoTorrent.Messages.dll": {
+            "related": ".xml"
+          },
+          "lib/net6.0/MonoTorrent.PiecePicking.dll": {
+            "related": ".xml"
+          },
+          "lib/net6.0/MonoTorrent.PieceWriter.dll": {
+            "related": ".xml"
+          },
+          "lib/net6.0/MonoTorrent.PortForwarding.dll": {
+            "related": ".xml"
+          },
+          "lib/net6.0/MonoTorrent.Trackers.dll": {
+            "related": ".xml"
+          },
+          "lib/net6.0/MonoTorrent.dll": {
+            "related": ".BEncoding.xml;.Client.xml;.Connections.xml;.Dht.xml;.Factories.xml;.Messages.xml;.PiecePicking.xml;.PieceWriter.xml;.PortForwarding.xml;.Trackers.xml;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/MonoTorrent.BEncoding.dll": {
+            "related": ".xml"
+          },
+          "lib/net6.0/MonoTorrent.Client.dll": {
+            "related": ".xml"
+          },
+          "lib/net6.0/MonoTorrent.Connections.dll": {
+            "related": ".xml"
+          },
+          "lib/net6.0/MonoTorrent.Dht.dll": {
+            "related": ".xml"
+          },
+          "lib/net6.0/MonoTorrent.Factories.dll": {
+            "related": ".xml"
+          },
+          "lib/net6.0/MonoTorrent.Messages.dll": {
+            "related": ".xml"
+          },
+          "lib/net6.0/MonoTorrent.PiecePicking.dll": {
+            "related": ".xml"
+          },
+          "lib/net6.0/MonoTorrent.PieceWriter.dll": {
+            "related": ".xml"
+          },
+          "lib/net6.0/MonoTorrent.PortForwarding.dll": {
+            "related": ".xml"
+          },
+          "lib/net6.0/MonoTorrent.Trackers.dll": {
+            "related": ".xml"
+          },
+          "lib/net6.0/MonoTorrent.dll": {
+            "related": ".BEncoding.xml;.Client.xml;.Connections.xml;.Dht.xml;.Factories.xml;.Messages.xml;.PiecePicking.xml;.PieceWriter.xml;.PortForwarding.xml;.Trackers.xml;.xml"
+          }
+        }
+      },
+      "ReusableTasks/4.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/ReusableTasks.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/ReusableTasks.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/_._": {}
+        }
+      }
+    },
+    "net9.0/win-x64": {
+      "Microsoft.NET.ILLink.Tasks/9.0.11": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
       "Mono.Nat/3.0.0": {
         "type": "package",
         "compile": {
@@ -111,6 +231,57 @@
     }
   },
   "libraries": {
+    "Microsoft.NET.ILLink.Tasks/9.0.11": {
+      "sha512": "vvB9rtDmWaXgYkViT00KORBVmA3pcYsHlgd9vOPqL9sf5bKy3rvLMF1+sI1uUfVj28S3itirHlHmX5/kcpZKNw==",
+      "type": "package",
+      "path": "microsoft.net.illink.tasks/9.0.11",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "Sdk/Sdk.props",
+        "THIRD-PARTY-NOTICES.TXT",
+        "analyzers/dotnet/cs/ILLink.CodeFixProvider.dll",
+        "analyzers/dotnet/cs/ILLink.RoslynAnalyzer.dll",
+        "build/Microsoft.NET.ILLink.Analyzers.props",
+        "build/Microsoft.NET.ILLink.Tasks.props",
+        "build/Microsoft.NET.ILLink.targets",
+        "microsoft.net.illink.tasks.9.0.11.nupkg.sha512",
+        "microsoft.net.illink.tasks.nuspec",
+        "tools/net472/ILLink.Tasks.dll",
+        "tools/net472/ILLink.Tasks.dll.config",
+        "tools/net472/Mono.Cecil.Mdb.dll",
+        "tools/net472/Mono.Cecil.Pdb.dll",
+        "tools/net472/Mono.Cecil.Rocks.dll",
+        "tools/net472/Mono.Cecil.dll",
+        "tools/net472/Sdk/Sdk.props",
+        "tools/net472/System.Buffers.dll",
+        "tools/net472/System.Collections.Immutable.dll",
+        "tools/net472/System.Memory.dll",
+        "tools/net472/System.Numerics.Vectors.dll",
+        "tools/net472/System.Reflection.Metadata.dll",
+        "tools/net472/System.Runtime.CompilerServices.Unsafe.dll",
+        "tools/net472/build/Microsoft.NET.ILLink.Analyzers.props",
+        "tools/net472/build/Microsoft.NET.ILLink.Tasks.props",
+        "tools/net472/build/Microsoft.NET.ILLink.targets",
+        "tools/net9.0/ILLink.Tasks.deps.json",
+        "tools/net9.0/ILLink.Tasks.dll",
+        "tools/net9.0/Mono.Cecil.Mdb.dll",
+        "tools/net9.0/Mono.Cecil.Pdb.dll",
+        "tools/net9.0/Mono.Cecil.Rocks.dll",
+        "tools/net9.0/Mono.Cecil.dll",
+        "tools/net9.0/Sdk/Sdk.props",
+        "tools/net9.0/build/Microsoft.NET.ILLink.Analyzers.props",
+        "tools/net9.0/build/Microsoft.NET.ILLink.Tasks.props",
+        "tools/net9.0/build/Microsoft.NET.ILLink.targets",
+        "tools/net9.0/illink.deps.json",
+        "tools/net9.0/illink.dll",
+        "tools/net9.0/illink.runtimeconfig.json",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "Mono.Nat/3.0.0": {
       "sha512": "LgRC8/8plJfvr1nCPmyHNIwP4fs346doMA/UVDZvFN0RfGJdyD2uS7Dl1AydxjVLrIvad8ghozI0vYFWcfPeYQ==",
       "type": "package",
@@ -297,6 +468,7 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "Microsoft.NET.ILLink.Tasks >= 9.0.11",
       "MonoTorrent >= 3.0.2"
     ]
   },
@@ -350,6 +522,12 @@
       "net9.0": {
         "targetAlias": "net9.0",
         "dependencies": {
+          "Microsoft.NET.ILLink.Tasks": {
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[9.0.11, )",
+            "autoReferenced": true
+          },
           "MonoTorrent": {
             "target": "Package",
             "version": "[3.0.2, )"
@@ -366,12 +544,31 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
+            "version": "[9.0.11, 9.0.11]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Runtime.win-x64",
+            "version": "[9.0.11, 9.0.11]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
+            "version": "[9.0.11, 9.0.11]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json"
+      }
+    },
+    "runtimes": {
+      "win-x64": {
+        "#import": []
       }
     }
   }
