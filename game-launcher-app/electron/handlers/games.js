@@ -58,15 +58,16 @@ function registerGameHandlers() {
 
 
     // -=---- HANDLER PARA EXECUTAR O DONWLOADER ---=---
-    ipcMain.handle("download-torrent", async (event, magnetLink) => {
-        const downloadPath = path.join(app.getPath("downloads"), "UnEpicGames");
+    ipcMain.handle("download-torrent", async (event, magnetLink, inputDirectory) => {
+        console.log("inputDirectory recebido:", inputDirectory);
+
+        const downloadPath = inputDirectory || path.join(app.getPath("userData"), "UnEpic Games", "Downloads");
         console.log("magnetLink recebido:", magnetLink);
 
-        // AJUSTE DE CAMINHO:
-        // Se o script está em 'backend/js' e o exe em 'backend/js/publish'
+        
         const csharpExe = path.join(__dirname, "../../src/backend/js/publish/torrent-downloader.exe");
 
-        // LOG DE DEBUG (Vê o terminal do VS Code!)
+        // log pra debug
         console.log("--- DEBUG DE CAMINHO ---");
         console.log("Procurando em:", csharpExe);
         console.log("Existe?", fs.existsSync(csharpExe));

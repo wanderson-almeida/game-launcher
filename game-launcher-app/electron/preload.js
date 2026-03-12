@@ -4,7 +4,7 @@ contextBridge.exposeInMainWorld("launcherAPI", {
   openFileDialog: () => ipcRenderer.invoke("open-file-dialog"),
   selectDirectoryDialog: () => ipcRenderer.invoke("select-directory-dialog"),
   installExe: (caminho) => ipcRenderer.invoke("install-exe", caminho),
-  downloadTorrent: (magnetLink) => ipcRenderer.invoke("download-torrent", magnetLink),
+  downloadTorrent: (magnetLink, inputDirectory) => ipcRenderer.invoke("download-torrent", magnetLink, inputDirectory),
   
   // receber o progresso do donwload do torrent
   onDownloadProgress: (callback) => {

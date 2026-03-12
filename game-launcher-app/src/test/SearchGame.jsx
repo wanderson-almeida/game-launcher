@@ -9,7 +9,7 @@ const SearchGames = () => {
     const [downloading, setDownloading] = useState({ active: false, progress: 0, gameTitle: '' });
     
     // Estado do Diretório (Caminho padrão inicial)
-    const [diretorioInstalacao, setDiretorioInstalacao] = useState('C:\\Games\\Download');
+    const [inputDirectory, setInputDirectory] = useState('C:\\Users\\User\\AppData\\Roaming\\game-launcher-app\\UnEpic Games\\Downloads');
 
     // Listener para o progresso vindo do C#
     useEffect(() => {
@@ -31,7 +31,7 @@ const SearchGames = () => {
     const selecionarPasta = async () => {
         const pastaSelecionada = await window.launcherAPI.selectDirectoryDialog();
         if (pastaSelecionada) {
-            setDiretorioInstalacao(pastaSelecionada);
+            setInputDirectory(pastaSelecionada);
         }
     };
 
@@ -59,10 +59,10 @@ const SearchGames = () => {
 
         try {
             // Passamos o magnet E o diretório escolhido para o C#
-            const result = await window.launcherAPI.downloadTorrent(magnet, diretorioInstalacao);
+            const result = await window.launcherAPI.downloadTorrent(magnet, inputDirectory);
             
             if (result.success) {
-                alert(`${game.title} instalado com sucesso em: ${diretorioInstalacao}`);
+                alert(`${game.title} instalado com sucesso em: ${inputDirectory}`);
             } else {
                 alert(`Erro: ${result.error}`);
             }
@@ -82,7 +82,7 @@ const SearchGames = () => {
             <div style={styles.folderSection}>
                 <p style={styles.label}>Local de Instalação:</p>
                 <div style={styles.pathRow}>
-                    <code style={styles.pathDisplay}>{diretorioInstalacao}</code>
+                    <code style={styles.pathDisplay}>{inputDirectory}</code>
                     <button onClick={selecionarPasta} style={styles.secondaryBtn}>Alterar</button>
                 </div>
             </div>
