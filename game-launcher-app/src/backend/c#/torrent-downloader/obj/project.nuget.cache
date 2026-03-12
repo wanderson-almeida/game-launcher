@@ -1,16 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "1zpelF9kL0I=",
+  "dgSpecHash": "kt8I0JBuxv0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Usuario\\OneDrive\\Documentos\\My Projects\\game-launcher\\game-launcher-app\\src\\backend\\c#\\torrent-downloader\\torrent-downloader.csproj",
+  "projectFilePath": "C:\\Users\\Braia\\Documents\\VS Code\\My Projects\\game-launcher\\game-launcher-app\\src\\backend\\c#\\torrent-downloader\\torrent-downloader.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.net.illink.tasks\\9.0.11\\microsoft.net.illink.tasks.9.0.11.nupkg.sha512",
-    "C:\\Users\\Usuario\\.nuget\\packages\\mono.nat\\3.0.0\\mono.nat.3.0.0.nupkg.sha512",
-    "C:\\Users\\Usuario\\.nuget\\packages\\monotorrent\\3.0.2\\monotorrent.3.0.2.nupkg.sha512",
-    "C:\\Users\\Usuario\\.nuget\\packages\\reusabletasks\\4.0.0\\reusabletasks.4.0.0.nupkg.sha512",
-    "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\9.0.11\\microsoft.netcore.app.runtime.win-x64.9.0.11.nupkg.sha512",
-    "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\9.0.11\\microsoft.windowsdesktop.app.runtime.win-x64.9.0.11.nupkg.sha512",
-    "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\9.0.11\\microsoft.aspnetcore.app.runtime.win-x64.9.0.11.nupkg.sha512"
+    "C:\\Users\\Braia\\.nuget\\packages\\mono.nat\\3.0.0\\mono.nat.3.0.0.nupkg.sha512",
+    "C:\\Users\\Braia\\.nuget\\packages\\monotorrent\\3.0.2\\monotorrent.3.0.2.nupkg.sha512",
+    "C:\\Users\\Braia\\.nuget\\packages\\reusabletasks\\4.0.0\\reusabletasks.4.0.0.nupkg.sha512"
   ],
   "logs": []
 }
