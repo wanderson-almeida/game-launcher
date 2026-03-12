@@ -59,6 +59,10 @@
             "MonoTorrent": {
               "target": "Package",
               "version": "[3.0.2, )"
+            },
+            "SharpCompress": {
+              "target": "Package",
+              "version": "[0.47.0, )"
             }
           },
           "imports": [

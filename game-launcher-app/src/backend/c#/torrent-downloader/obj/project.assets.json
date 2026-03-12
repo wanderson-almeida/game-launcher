@@ -113,6 +113,15 @@
         "build": {
           "build/_._": {}
         }
+      },
+      "SharpCompress/0.47.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/SharpCompress.dll": {}
+        },
+        "runtime": {
+          "lib/net9.0/SharpCompress.dll": {}
+        }
       }
     },
     "net9.0/win-x64": {
@@ -226,6 +235,15 @@
         },
         "build": {
           "build/_._": {}
+        }
+      },
+      "SharpCompress/0.47.0": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/SharpCompress.dll": {}
+        },
+        "runtime": {
+          "lib/net9.0/SharpCompress.dll": {}
         }
       }
     }
@@ -464,12 +482,34 @@
         "reusabletasks.4.0.0.nupkg.sha512",
         "reusabletasks.nuspec"
       ]
+    },
+    "SharpCompress/0.47.0": {
+      "sha512": "cy+K4ES0FhDTiyjPOs4ktF7pHwaZ2BS8GwCyZVFtV00hVqwIY+6YqcPv3V7C8MLPt6eJVxhSl+tu/w1J8L8EUg==",
+      "type": "package",
+      "path": "sharpcompress/0.47.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net10.0/SharpCompress.dll",
+        "lib/net48/SharpCompress.dll",
+        "lib/net5.0/SharpCompress.dll",
+        "lib/net6.0/SharpCompress.dll",
+        "lib/net7.0/SharpCompress.dll",
+        "lib/net8.0/SharpCompress.dll",
+        "lib/net9.0/SharpCompress.dll",
+        "lib/netstandard2.0/SharpCompress.dll",
+        "lib/netstandard2.1/SharpCompress.dll",
+        "sharpcompress.0.47.0.nupkg.sha512",
+        "sharpcompress.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
       "Microsoft.NET.ILLink.Tasks >= 9.0.11",
-      "MonoTorrent >= 3.0.2"
+      "MonoTorrent >= 3.0.2",
+      "SharpCompress >= 0.47.0"
     ]
   },
   "packageFolders": {
@@ -531,6 +571,10 @@
           "MonoTorrent": {
             "target": "Package",
             "version": "[3.0.2, )"
+          },
+          "SharpCompress": {
+            "target": "Package",
+            "version": "[0.47.0, )"
           }
         },
         "imports": [

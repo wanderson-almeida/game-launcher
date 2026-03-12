@@ -10,6 +10,7 @@
       "torrent-downloader/1.0.0": {
         "dependencies": {
           "MonoTorrent": "3.0.2",
+          "SharpCompress": "0.47.0",
           "runtimepack.Microsoft.NETCore.App.Runtime.win-x64": "9.0.11"
         },
         "runtime": {
@@ -763,6 +764,14 @@
             "fileVersion": "4.0.0.0"
           }
         }
+      },
+      "SharpCompress/0.47.0": {
+        "runtime": {
+          "lib/net9.0/SharpCompress.dll": {
+            "assemblyVersion": "0.47.0.0",
+            "fileVersion": "0.47.0.0"
+          }
+        }
       }
     }
   },
@@ -797,6 +806,13 @@
       "sha512": "sha512-6EKzscjq+Q+uxD0N5GWUBO2N34cuDiJ08ZxRs1lqS0Hwvnjp6AgimUIX/8dqIxRZbPOG4gcikTMo+PM4D9CfaQ==",
       "path": "reusabletasks/4.0.0",
       "hashPath": "reusabletasks.4.0.0.nupkg.sha512"
+    },
+    "SharpCompress/0.47.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cy+K4ES0FhDTiyjPOs4ktF7pHwaZ2BS8GwCyZVFtV00hVqwIY+6YqcPv3V7C8MLPt6eJVxhSl+tu/w1J8L8EUg==",
+      "path": "sharpcompress/0.47.0",
+      "hashPath": "sharpcompress.0.47.0.nupkg.sha512"
     }
   },
   "runtimes": {
