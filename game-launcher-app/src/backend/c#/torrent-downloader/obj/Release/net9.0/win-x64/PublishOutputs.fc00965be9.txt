@@ -1,0 +1,2 @@
+C:\Users\Braia\Documents\VS Code\My Projects\game-launcher\game-launcher-app\src\backend\c#\torrent-downloader\bin\Release\net9.0\win-x64\publish\torrent-downloader.pdb
+C:\Users\Braia\Documents\VS Code\My Projects\game-launcher\game-launcher-app\src\backend\c#\torrent-downloader\bin\Release\net9.0\win-x64\publish\torrent-downloader.exe
