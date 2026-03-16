@@ -21,7 +21,7 @@ await manager.StartAsync();
 
 while (manager.State != TorrentState.Seeding)
 {
-    Console.WriteLine($"Progresso: {manager.Progress:F2}%");
+    Console.WriteLine($"PROGRESSO: {manager.Progress:F2}%");
     Console.Out.Flush();
     await Task.Delay(1000);
 }
