@@ -1,5 +1,5 @@
 
-import './Catalogo.css';
+import './styles/Catalogo.css';
 
 function Catalogo() {
    
