@@ -332,19 +332,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Usuario\\.nuget\\packages\\": {}
+    "C:\\Users\\Braia\\.nuget\\packages\\": {},
+    "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Usuario\\OneDrive\\Documentos\\My Projects\\game-launcher\\game-launcher-app\\src\\backend\\c#\\torrent-downloader\\torrent-downloader.csproj",
+      "projectUniqueName": "C:\\Users\\Braia\\Documents\\VS Code\\My Projects\\game-launcher\\game-launcher-app\\src\\backend\\c#\\torrent-downloader\\torrent-downloader.csproj",
       "projectName": "torrent-downloader",
-      "projectPath": "C:\\Users\\Usuario\\OneDrive\\Documentos\\My Projects\\game-launcher\\game-launcher-app\\src\\backend\\c#\\torrent-downloader\\torrent-downloader.csproj",
-      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Usuario\\OneDrive\\Documentos\\My Projects\\game-launcher\\game-launcher-app\\src\\backend\\c#\\torrent-downloader\\obj\\",
+      "projectPath": "C:\\Users\\Braia\\Documents\\VS Code\\My Projects\\game-launcher\\game-launcher-app\\src\\backend\\c#\\torrent-downloader\\torrent-downloader.csproj",
+      "packagesPath": "C:\\Users\\Braia\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Braia\\Documents\\VS Code\\My Projects\\game-launcher\\game-launcher-app\\src\\backend\\c#\\torrent-downloader\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Braia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -370,7 +375,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.300"
+      "SdkAnalysisLevel": "10.0.100"
     },
     "frameworks": {
       "net9.0": {
@@ -401,7 +406,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
