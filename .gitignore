@@ -25,3 +25,7 @@ dist-ssr
 game-launcher-app/.env
 game-launcher-app/src/.env
 .venv
+game-launcher-app/src/backend/c#/torrent-downloader/bin/
+game-launcher-app/src/backend/c#/torrent-downloader/obj/
+bin/
+obj/
