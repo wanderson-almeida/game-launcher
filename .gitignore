@@ -25,3 +25,9 @@ dist-ssr
 game-launcher-app/.env
 game-launcher-app/src/.env
 .venv
+game-launcher-app/src/backend/c\#/torrent-downloader/obj/Debug/net9.0/torrent-downloader.AssemblyInfo.cs
+game-launcher-app/src/backend/c\#/torrent-downloader/obj/Debug/net9.0/torrent-downloader.AssemblyInfoInputs.cache
+game-launcher-app/src/backend/js/cache/dht_nodes.cache
+game-launcher-app/src/backend/c\#/torrent-downloader/obj/Debug/net9.0/torrent-downloader.AssemblyInfo.cs
+game-launcher-app/src/backend/js/cache/fastresume/21F45166AC317A9E05E77A1F65B2FDA3ADA6E00B.fresume
+game-launcher-app/src/backend/js/cache/metadata/21F45166AC317A9E05E77A1F65B2FDA3ADA6E00B.torrent
