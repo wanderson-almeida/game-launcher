@@ -1,4 +1,4 @@
-import { Routes, Route, Link } from "react-router-dom";
+import {Link, Outlet } from "react-router-dom";
 
 function App() {
   return (
@@ -6,7 +6,7 @@ function App() {
       <nav>
         <div className="nav-container">
           <div className="logo">
-            <img src="/logo.png" alt="Logo do site" />
+            <Link to= "/"><img src="./src/assets/logo.png" alt="Logo do site" /></Link>
           </div>
           <ul>
             <li>
@@ -15,12 +15,12 @@ function App() {
             <li>
               <Link to="/biblioteca">Biblioteca</Link>
             </li>
-            <li>
-              <Link to="/perfil">Perfil</Link>
-            </li>
+            
           </ul>
         </div>
       </nav>
+
+      <Outlet/>
     </>
   );
 }

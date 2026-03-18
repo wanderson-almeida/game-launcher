@@ -65,3 +65,19 @@ nav ul li a {
 nav ul li a:hover {
   background-color: #555;
 }
+
+.home-container{
+  height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-box{
+  background-color: #222;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
