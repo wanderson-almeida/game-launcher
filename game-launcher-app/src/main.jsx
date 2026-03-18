@@ -1,11 +1,15 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-// import HomePage from './pages/HomePage.jsx';
+import { BrowserRouter } from "react-router-dom";
+import AppRoutes from './routes/AppRoutes.jsx';
+import './index.css';
 import SaveExePath from './test/saveExePath.jsx';
 import SearchGames from './test/SearchGame.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <SearchGames />
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
   </StrictMode>,
 )

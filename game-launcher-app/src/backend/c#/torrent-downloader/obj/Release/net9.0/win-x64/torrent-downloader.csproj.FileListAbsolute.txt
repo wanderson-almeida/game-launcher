@@ -427,3 +427,4 @@ C:\Users\Braia\Documents\VS Code\My Projects\game-launcher\game-launcher-app\src
 C:\Users\Braia\Documents\VS Code\My Projects\game-launcher\game-launcher-app\src\backend\c#\torrent-downloader\obj\Release\net9.0\win-x64\torrent-downloader.genruntimeconfig.cache
 C:\Users\Braia\Documents\VS Code\My Projects\game-launcher\game-launcher-app\src\backend\c#\torrent-downloader\obj\Release\net9.0\win-x64\ref\torrent-downloader.dll
 C:\Users\Braia\Documents\VS Code\My Projects\game-launcher\game-launcher-app\src\backend\c#\torrent-downloader\bin\Release\net9.0\win-x64\SharpCompress.dll
+C:\Users\Usuario\OneDrive\Documentos\My Projects\game-launcher\game-launcher-app\src\backend\c#\torrent-downloader\bin\Release\net9.0\win-x64\SharpCompress.dll
