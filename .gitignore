@@ -34,3 +34,11 @@ game-launcher-app/src/backend/js/cache/metadata/21F45166AC317A9E05E77A1F65B2FDA3
 game-launcher-app/src/backend/c\#/torrent-downloader/obj/Debug/net9.0/torrent-downloader.AssemblyInfoInputs.cache
 game-launcher-app/src/backend/c\#/torrent-downloader/obj/Debug/net9.0/torrent-downloader.AssemblyInfo.cs
 game-launcher-app/cache/ 
+*.cache
+*.editorconfig
+*.editorconfig
+game-launcher-app/src/backend/c\#/torrent-downloader/obj/Debug/net9.0/torrent-downloader.GeneratedMSBuildEditorConfig.editorconfig
+game-launcher-app/src/backend/c\#/torrent-downloader/obj/Debug/net9.0/torrent-downloader.GlobalUsings.g.cs
+game-launcher-app/src/backend/c\#/torrent-downloader/obj/project.assets.json
+game-launcher-app/src/backend/c\#/torrent-downloader/obj/torrent-downloader.csproj.nuget.g.props
+game-launcher-app/src/backend/c\#/torrent-downloader/obj/torrent-downloader.csproj.nuget.dgspec.json
