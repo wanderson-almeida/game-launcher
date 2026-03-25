@@ -1,0 +1,113 @@
+Olá mundo, estou fazendo esse arquivo para aproveitar cada parte dos codigos do projeto e dos meu codigos para fazer uma "documentação" e estudar cada parte desse projeto
+
+
+    A principio, este é um projeto de um GameLauncher, uma biblioteca de jogos tipo a steam ou epic, só que com a ideia do steamunlock ou hydra. Este é o meu
+primeiro projeto com outras pessoas e integrando um back-end (mto dificil 😭), entao vamos la.
+
+
+Front-End: 1 > index.html: <div id="root"></div> : aqui é onde tudo começa, aqui é onde a aplicação react vai ser renderizada.
+
+<script type="module" src="/src/main.jsx"></script>: aqui carrega o arquivo principal da aplicação react, o type="module" deixa usar o import/export no javaScript;
+
+    2 > AppRoutes: basicamente aqui vai retornar caga pagina da aplicação, boa parte do codigo está em volta de <Routes> container que aloca todas as rotas, depois disso
+vem o <Route path="/" element={<App />}> é a rota principal, e isso renderiza o App.jsx, onde ta alocado navbar, e componentes importantes para a interface
+<Route index element={<Home />} /> aqui é a rota padrao, abriu o site, o site mostrara tudo o que tem nessa rota
+<Route path="catalogo" element={<Catalogo />} />
+<Route path="biblioteca" element={<Biblioteca />} /> Rotas filhas que serão renderizadas dentro do componente App.
+
+    3>  Catalogo.jsx: Aqui é onde está uma BOA parte do GameLauncher,
+const [todosJogos, setTodosJogos] = useState([]); <-- aqui é onde armazena os jogos carregados pela api (apiRawgRequests.py), e tambem começa com um array vazio,
+const [loading, setLoading] = useState(true); <-- aqui é o controle do carregamento de dados
+const [error, setError] = useState(null);<-- aqui guarda a mensagem de erro, caso o carregamente por algum motivo falhe
+const [paginaAtual, setPaginaAtual] = useState(1);<-- aqui é a paginação do front, a pagina que o usuario está visualizando
+const [paginaAPI, setPaginaAPI] = useState(1);<-- aqui é a paginação do back, pega qual pagina foi carregada, e controla quantas paginas ja foram buscadas
+
+useEffect(() => {
+    carregarJogos();
+}, []); <-- executa uma vez, e carrega a primeira pagina dos jogos da api
+
+const carregarJogos = async (pagina = 1) => {
+    const response = await fetch(`http://127.0.0.1:8000/games?page=${pagina}&page_size=20`); <-- aqui ele busca os dados da apiRawg, que eu deixei na porta 8000
+    e tambem aqui mostra que na primeira pagina irá mostrar 20 jogos por requisição.
+
+const data = await response.json();
+const jogosFormatados = data.map(game => ({
+    id: game.id,
+    nome: game.name,
+    imagem: game.background_image || null
+})); <-- aqui basicamente converte os dados da api para serem usados no front
+
+if (pagina === 1) {
+    setTodosJogos(jogosFormatados);  
+} else {
+    setTodosJogos(prevJogos => [...prevJogos, ...jogosFormatados]);  
+} <-- aqui é o controle de paginas, pra quando alguem quiser ir para a segunda pagina, tira a primeira e coloca a outra, com as requisições da outra
+
+
+const indiceUltimoJogo = paginaAtual * jogosPorPagina;
+const indicePrimeiroJogo = indiceUltimoJogo - jogosPorPagina;
+const jogosAtuais = todosJogos.slice(indicePrimeiroJogo, indiceUltimoJogo); <-- aqui é o controle das paginas, o slice é pra pegar apenas os 20 jogos da pagina paginaAtual
+
+const totalPaginas = Math.ceil(todosJogos.length / jogosPorPagina); <-- calcula o total de paginas baseado nos jogos ja carregados, o math.ceil é para arredondar 
+os valores para cima
+    Ex: Math.ceil(1.2)   // 2
+    Math.ceil(1.5)   // 2
+    Math.ceil(1.9)   // 2
+    Math.ceil(2.0)   // 2
+    Math.ceil(2.1)   // 3
+
+    todosJogos.length = 35 jogos
+    jogosPorPagina = 20
+
+    35 / 20 = 1.75
+    Math.ceil(1.75) = 2 páginas  // Precisa de 2 páginas para mostrar 35 jogos
+
+ 
+ 
+const getPaginasVisiveis = () => {
+        const paginas = [];
+        const maxPaginasVisiveis = 5;
+        
+        if (totalPaginas <= maxPaginasVisiveis) {
+            for (let i = 1; i <= totalPaginas; i++) {
+                paginas.push(i);
+            }
+        } else {
+            let inicio = Math.max(1, paginaAtual - 2);
+            let fim = Math.min(totalPaginas, inicio + 4);
+            
+            if (fim - inicio < 4) {
+                inicio = Math.max(1, fim - 4);
+            }
+            
+            for (let i = inicio; i <= fim; i++) {
+                paginas.push(i);
+            }
+        }
+        
+        return paginas;
+    };  <-- aqui ja é um negoço mais complexo, inclusive eu precisei da ajuda de ia para consertar alguns erros que estava tendo, mas isso aqui é a função para a
+    paginação dos jogos
+
+
+
+    <div className="jogos-grid">
+    {jogosAtuais.map(jogo => (
+        <div key={jogo.id} className="jogo-card">
+            <div className="jogo-imagem">
+                {jogo.imagem ? (
+                    <img src={jogo.imagem} alt={jogo.nome} />
+                ) : (
+                    <div className="imagem-placeholder">🎮</div>
+                )}
+            </div>
+            <div className="jogo-info">
+                <h3>{jogo.nome}</h3>
+                <button className="btn-comprar">Baixar</button>
+            </div>
+        </div>
+    ))}
+</div>  <-- aqui é a renderização, mostra os jogos em formato dce grid, se tem imagem mostra a imagem do jogo respectivo, se nao mostra só um placeholder, e tem 
+um botao de Baixar
+
+acho que nao é assim que faz uma documentaçao kkkkk

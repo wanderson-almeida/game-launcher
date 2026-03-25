@@ -11,7 +11,7 @@ async function pesquisarGeral() {
   const resultado = document.getElementById("resultadoGeral");
 
   try {
-    const response = await fetch("https://hydralinks.pages.dev/sources/onlinefix.json");
+    const response = await fetch("https://hydralinks.cloud/sources/onlinefix.json");
     const data = await response.json();
 
     jogos = data.downloads;

@@ -1,72 +1,91 @@
-import aiohttp, asyncio, json, os
+import aiohttp
+import asyncio
+import json
+import os
 from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-
-# ó, se liga
+import subprocess
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
 
 load_dotenv()
 
 
-# criar api
 app = FastAPI()
 
-# aqui é pro react ou o front end ter acesso ao back
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[
+        "http://localhost:5173",     
+        "http://127.0.0.1:5173",
+        "http://localhost:3000",     
+        "http://127.0.0.1:3000",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
+
 baseGamesUrl = os.getenv("BASE_GAMES_URL")
 apiKey = os.getenv("RAWG_API_KEY")
 
 print("URL:", baseGamesUrl)
-print("KEY:", apiKey)
+print("KEY:", apiKey[:5] + "..." if apiKey else "Não encontrada")
 
-# aq é pra lista de jogos que tem na api
+@app.get("/")
+async def root():
+    return {"message": "API está funcionando!"}
 
 @app.get("/games")
-async def get_games():
-    # abre um sessao http:
-    async with aiohttp.ClientSession() as session: 
-        # faz uma requisição pra rawg:
-        async with session.get(f"{baseGamesUrl}/games?key={apiKey}") as r:
-            # pega a resposta e bota em json
-            data = await r.json()
-# pega e retorna a lista de jogos:
-    return data ["results"]
+async def get_games(page: int = 1, page_size: int = 20):
+    try:
+        async with aiohttp.ClientSession() as session:
+            async with session.get(
+                f"{baseGamesUrl}/games?key={apiKey}&page_size={page_size}&page={page}"
+            ) as r:
+                if r.status != 200:
+                    return {"error": f"Erro na API: {r.status}"}
+                data = await r.json()
+                return data["results"]
+    except Exception as e:
+        return {"error": str(e)}
 
+@app.get("/games/{gameId}")
+async def get_game_details(gameId: int):
+    try:
+        async with aiohttp.ClientSession() as session:
+            # pegar detalhes do jogo
+            async with session.get(f"{baseGamesUrl}/games/{gameId}?key={apiKey}") as r:
+                if r.status != 200:
+                    return {"error": "Jogo não encontrado"}
+                data = await r.json()
 
-@app.get("/games/{gameName}")
-async def get_game_details(gameName: str):
-    async with aiohttp.ClientSession() as session:
-        # pega os dados dos jogos, como dados e screenshot:
-        async with session.get(f"{baseGamesUrl}/games/{gameName}?key={apiKey}") as r:
-            data = await r.json()
+            # pegar screenshots
+            async with session.get(f"{baseGamesUrl}/games/{gameId}/screenshots?key={apiKey}") as screenshots:
+                images = await screenshots.json()
 
-        async with session.get(f"{baseGamesUrl}/games/{gameName}/screenshots?keyh={apiKey}") as screenshots:
-            images = await screenshots.json()
-
-
-    organized = {
+        # organizar os dados
+        organized = {
             "id": data["id"],
-            "name_original": data["name_original"],
-            "released": data["released"],
-            "updated": data["updated"],
-            "achievements_count": data["achievements_count"],
-            "rating": data["rating"],
-            "ratings_count": data["ratings_count"],
-            "playtime": data["playtime"],
-            "description": data["description"],
-            "background_image": data["background_image"],
-            "background_image_additional": data["background_image_additional"],
-            "screenshots": [screenshot["image"] for screenshot in images["results"]]
+            "name": data["name"],
+            "name_original": data.get("name_original", data["name"]),
+            "released": data.get("released"),
+            "updated": data.get("updated"),
+            "achievements_count": data.get("achievements_count", 0),
+            "rating": data.get("rating", 0),
+            "ratings_count": data.get("ratings_count", 0),
+            "playtime": data.get("playtime", 0),
+            "description": data.get("description", ""),
+            "background_image": data.get("background_image"),
+            "background_image_additional": data.get("background_image_additional"),
+            "screenshots": [screenshot["image"] for screenshot in images.get("results", [])]
         }
 
-    return organized
-
+        return organized
+    except Exception as e:
+        return {"error": str(e)}
+    
 

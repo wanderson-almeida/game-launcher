@@ -102,3 +102,194 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* Estilos para paginação */
+.info-pagina {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.paginacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-pagina {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.btn-pagina:hover:not(:disabled) {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.btn-pagina.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.btn-pagina:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn-nav {
+    padding: 8px 16px;
+    font-weight: bold;
+}
+
+.paginas-numeros {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+/* Responsividade para paginação */
+@media (max-width: 768px) {
+    .paginacao {
+        gap: 5px;
+    }
+    
+    .btn-pagina {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+    
+    .btn-nav {
+        padding: 6px 12px;
+    }
+}
+
+/* Estilos adicionais */
+.info-total {
+    font-size: 0.85rem;
+    color: #007bff;
+    margin-top: 5px;
+}
+
+.carregar-mais-container {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.btn-carregar-mais {
+    padding: 12px 24px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.btn-carregar-mais:hover:not(:disabled) {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.btn-carregar-mais:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.info-teste {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #856404;
+    background-color: #fff3cd;
+    padding: 5px 10px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.btn-tentar-novamente {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-tentar-novamente:hover {
+    background-color: #0056b3;
+}
+
+.btn-download {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-download:hover:not(:disabled) {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.btn-download:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.btn-download.completed {
+    background-color: #2196F3;
+}
+
+.btn-download.error {
+    background-color: #f44336;
+}
+
+.download-status {
+    width: 100%;
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 8px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #4CAF50;
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    font-size: 12px;
+    color: #666;
+    min-width: 45px;
+}
