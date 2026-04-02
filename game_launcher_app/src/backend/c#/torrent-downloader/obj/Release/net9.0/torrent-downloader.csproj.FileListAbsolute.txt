@@ -1,0 +1,6 @@
+C:\Users\apolo\Documents\GitHub\game-launcher\game_launcher_app\src\backend\c#\torrent-downloader\obj\Release\net9.0\torrent-downloader.csproj.AssemblyReference.cache
+C:\Users\apolo\Documents\GitHub\game-launcher\game_launcher_app\src\backend\c#\torrent-downloader\obj\Release\net9.0\torrent-downloader.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\apolo\Documents\GitHub\game-launcher\game_launcher_app\src\backend\c#\torrent-downloader\obj\Release\net9.0\torrent-downloader.AssemblyInfoInputs.cache
+C:\Users\apolo\Documents\GitHub\game-launcher\game_launcher_app\src\backend\c#\torrent-downloader\obj\Release\net9.0\torrent-downloader.AssemblyInfo.cs
+C:\Users\apolo\Documents\GitHub\game-launcher\game_launcher_app\src\backend\c#\torrent-downloader\obj\Release\net9.0\torrent-downloader.csproj.CoreCompileInputs.cache
+C:\Users\apolo\Documents\GitHub\game-launcher\game_launcher_app\src\backend\c#\torrent-downloader\obj\Release\net9.0\torrent-downloader.sourcelink.json

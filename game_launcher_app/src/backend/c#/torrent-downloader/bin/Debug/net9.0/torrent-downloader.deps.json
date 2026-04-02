@@ -9,7 +9,7 @@
       "torrent-downloader/1.0.0": {
         "dependencies": {
           "MonoTorrent": "3.0.2",
-          "SharpCompress": "0.47.0"
+          "SharpCompress": "0.47.3"
         },
         "runtime": {
           "torrent-downloader.dll": {}
@@ -83,11 +83,11 @@
           }
         }
       },
-      "SharpCompress/0.47.0": {
+      "SharpCompress/0.47.3": {
         "runtime": {
           "lib/net9.0/SharpCompress.dll": {
-            "assemblyVersion": "0.47.0.0",
-            "fileVersion": "0.47.0.0"
+            "assemblyVersion": "0.47.3.0",
+            "fileVersion": "0.47.3.0"
           }
         }
       }
@@ -120,12 +120,12 @@
       "path": "reusabletasks/4.0.0",
       "hashPath": "reusabletasks.4.0.0.nupkg.sha512"
     },
-    "SharpCompress/0.47.0": {
+    "SharpCompress/0.47.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-cy+K4ES0FhDTiyjPOs4ktF7pHwaZ2BS8GwCyZVFtV00hVqwIY+6YqcPv3V7C8MLPt6eJVxhSl+tu/w1J8L8EUg==",
-      "path": "sharpcompress/0.47.0",
-      "hashPath": "sharpcompress.0.47.0.nupkg.sha512"
+      "sha512": "sha512-KPODbBWz4zRs413KAHgy7N43bXCsAJyrCJMTajRan3Gl4epukJQKQxZeK1FVq/VvRZ4Y1MLz4Jc5UYSokwEojQ==",
+      "path": "sharpcompress/0.47.3",
+      "hashPath": "sharpcompress.0.47.3.nupkg.sha512"
     }
   }
 }
